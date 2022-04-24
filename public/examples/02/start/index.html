@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Getting Started with Kendo UI for jQuery</title>
+    <meta charset="utf-8"/>
+    <title>Kendo UI Snippet</title>
 
-    <link href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.default.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2022.1.301/js/kendo.all.min.js"></script>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.412/styles/kendo.default-v2.min.css"/>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.412/js/kendo.all.min.js"></script>
 </head>
 <body>
-<script src="public/examples/02/start/js/scripts.js"></script>
-
-<button id="kkk">Halo</button>
-
-<input id="datePicker">
-
-<p>Hello <a href="https://docs.telerik.com/kendo-ui/intro/first-steps">Kendo UI for jQuery</a>!
-    This is version <strong id="kendoVersion"></strong>.</p>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="center hideform">
+    <button id="close" style="float: right;">X</button>
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<button id="show">Show form</button>
 <script>
-    // import '@progress/kendo-ui/js/kendo.button'
+    $('#show').on('click', function () {
+        $('.center').show();
+        $(this).hide();
+    })
 
-    (function ($) {
-
-
-        $(document).ready(function () {
-
-            $("button").kendoButton();
-            $("#datePicker").kendoDatePicker()
-
-        })
-    })(jQuery)
-
-
+    $('#close').on('click', function () {
+        $('.center').hide();
+        $('#show').show();
+    })
 </script>
+
+<style>
+
+    .center {
+        margin: auto;
+        width: 60%;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .hideform {
+        display: none;
+    }
+</style>
 </body>
 </html>

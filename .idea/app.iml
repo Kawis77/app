@@ -9,5 +9,9 @@
     <orderEntry type="library" name="kendo.common" level="application" />
     <orderEntry type="library" name="jquery-1.12.3" level="application" />
     <orderEntry type="library" name="kendo.all" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="kendo.default-v2" level="application" />
+    <orderEntry type="library" name="jquery-3.5.1" level="application" />
+    <orderEntry type="library" name="jquery-1.12.4" level="application" />
   </component>
 </module>
